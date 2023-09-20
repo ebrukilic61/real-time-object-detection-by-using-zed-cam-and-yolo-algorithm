@@ -1,0 +1,14 @@
+
+Öncelikle cmd üzerinden bu kodu kullanarak cuda yüklü mü değil mi diye sorgulayın:
+python -c "import torch; print(torch.version.cuda)"
+
+Sonrasında eğer bilgisayarınızda kurulu değilse çıktı olarak cuda is not available şeklinde bir hata verir. Aşağıda verdiğim link üzerinden cuda’yı kurmanız gerekir.
+https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local 
+CUDA olmadan da kodu çalıştırabilirsiniz fakat işlem bayağı yavaş gerçekleşebilir, bu nedenle yüklemenizi tavsiye ederim.
+
+Aşağıdaki komutları cmd’ye yazdırın tek tek, eğer bilgisayarınızda kurulu değilse bu kütüphanelerin de yüklenmesi gerekecek:
+pip install matplotlib
+pip install numpy
+pip install opencv-python
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+
