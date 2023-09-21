@@ -10,5 +10,6 @@ Aşağıdaki komutları cmd’ye yazdırın tek tek, eğer bilgisayarınızda ku
 pip install matplotlib
 pip install numpy
 pip install opencv-python
+pip install pandas
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
 
