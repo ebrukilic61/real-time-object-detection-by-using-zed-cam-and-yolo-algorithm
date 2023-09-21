@@ -1,0 +1,98 @@
+[
+    {
+        "label": "pyzed.sl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyzed.sl",
+        "description": "pyzed.sl",
+        "detail": "pyzed.sl",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "importlib.resources",
+        "description": "importlib.resources",
+        "isExtraImport": true,
+        "detail": "importlib.resources",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "pyplot",
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "isExtraImport": true,
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "kamera",
+        "description": "kamera",
+        "peekOfCode": "def main():\n    # Create a ZED camera object\n    zed = sl.Camera()\n    # Create a ZED camera object\n    # Set configuration parameters\n    init_params = sl.InitParameters()\n    init_params.camera_resolution = sl.RESOLUTION.HD1080\n    init_params.camera_fps = 30\n    # Open the ZED camera\n    err = zed.open(init_params)",
+        "detail": "kamera",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "yolov5_real_time",
+        "description": "yolov5_real_time",
+        "peekOfCode": "model = torch.hub.load('ultralytics/yolov5','custom',path='buraya best.pt modelinizin dosya yolunu yapıştırın',force_reload=True)\n#aşağıdaki gibi olacak \n#model = torch.hub.load('ultralytics/yolov5','custom',path='C:\\\\Users\\\\Lenovo\\\\Desktop\\\\wetransfer_otonom2023_test_kodlari_2023-01-26_1342\\\\OTONOM2023_TEST_KODLARI\\\\goruntuisleme\\\\best.pt',force_reload=True)\ncap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    start = time()\n    ret, frame = cap.read()\n    result = model(frame)\n    cv2.imshow('Screen',np.squeeze(result.render()))\n    if cv2.waitKey(10) & 0xff == ord('x'):",
+        "detail": "yolov5_real_time",
+        "documentation": {}
+    },
+    {
+        "label": "#model",
+        "kind": 5,
+        "importPath": "yolov5_real_time",
+        "description": "yolov5_real_time",
+        "peekOfCode": "#model = torch.hub.load('ultralytics/yolov5','custom',path='C:\\\\Users\\\\Lenovo\\\\Desktop\\\\wetransfer_otonom2023_test_kodlari_2023-01-26_1342\\\\OTONOM2023_TEST_KODLARI\\\\goruntuisleme\\\\best.pt',force_reload=True)\ncap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    start = time()\n    ret, frame = cap.read()\n    result = model(frame)\n    cv2.imshow('Screen',np.squeeze(result.render()))\n    if cv2.waitKey(10) & 0xff == ord('x'):\n        break\n    if cv2.getWindowProperty(\"Screen\",cv2.WND_PROP_VISIBLE) < 1:",
+        "detail": "yolov5_real_time",
+        "documentation": {}
+    },
+    {
+        "label": "cap",
+        "kind": 5,
+        "importPath": "yolov5_real_time",
+        "description": "yolov5_real_time",
+        "peekOfCode": "cap = cv2.VideoCapture(0)\nwhile cap.isOpened():\n    start = time()\n    ret, frame = cap.read()\n    result = model(frame)\n    cv2.imshow('Screen',np.squeeze(result.render()))\n    if cv2.waitKey(10) & 0xff == ord('x'):\n        break\n    if cv2.getWindowProperty(\"Screen\",cv2.WND_PROP_VISIBLE) < 1:\n        break",
+        "detail": "yolov5_real_time",
+        "documentation": {}
+    }
+]
